@@ -11,9 +11,78 @@ namespace harjoituksia
         static void Main(string[] args)
         {
 
-            Harjoitus3();
+            Harjoitus17();
 
             Console.ReadLine();
+
+        }
+        // ------------
+        static void Harjoitus1()
+        {
+            int luku;
+
+            Console.Write("Anna luku > ");
+            luku = int.Parse(Console.ReadLine());
+
+            if (luku == 1) Console.Write("Annoit luvun yksi ");
+
+            else if (luku == 2) Console.Write("Annoit luvun kaksi ");
+
+            else if (luku == 3) Console.Write("Annoit luvun kolme ");
+
+            else Console.Write("Annoit jonkin muun luvun ");
+
+        }
+        // ------------
+        static void Harjoitus2()
+        {
+            int points = 0;
+
+            Console.WriteLine("Anna pistemäärä > ");
+            points = int.Parse(Console.ReadLine());
+
+            switch (points)
+            {
+                case 0:
+                case 1: Console.WriteLine("Koulunumero on 0 ");
+
+                    break;
+
+                case 2:
+                case 3:
+                    Console.WriteLine("Koulunumero on 1 ");
+
+                    break;
+
+                case 4:
+                case 5:
+                    Console.WriteLine("Koulunumero on 2 ");
+
+                    break;
+
+                case 6:
+                case 7:
+                    Console.WriteLine("Koulunumero on 3 ");
+
+                    break;
+
+                case 8:
+                case 9:
+                    Console.WriteLine("Koulunumero on 4 ");
+
+                    break;
+
+                case 10:
+                case 11:
+                case 12:
+                    Console.WriteLine("Koulunumero on 5 ");
+
+                    break;
+
+                default: Console.WriteLine("Virheellinen pistemäärä! ");
+
+                    break;
+            }
 
         }
         // ------------
@@ -226,6 +295,35 @@ namespace harjoituksia
             Console.WriteLine("Kokonaispisteet: " + sum);
         }
         // ------------
+
+        static void Harjoitus15()
+        {
+            int num = 0;
+
+            Console.WriteLine("Anna luku > ");
+            num = int.Parse(Console.ReadLine());
+
+            int rounds = 0;
+            rounds = num - 2;
+
+            for (int i = 0; i < rounds; i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write("*");
+                }
+
+                Console.WriteLine();
+            }
+
+            for (int i = 0; i < 2; i++)
+            {                             
+                 Console.WriteLine("*");                 
+            }
+
+
+        }
+        // ------------
         static void Harjoitus16()
         {
             bool done = false;
@@ -254,6 +352,30 @@ namespace harjoituksia
                 }
 
             } while (!done);
+        }
+        // ------------
+
+        static void Harjoitus17()
+        {
+            int[] table1 = { 10, 20, 30, 40, 50 };
+            int[] table2 = { 5, 15, 25, 35, 45 };
+            int[] table3 = Enumerable.Concat(table1, table2).OrderBy(v => v).ToArray();
+
+            Console.WriteLine("Luvut taulukossa 1 : ");
+            foreach (int value in table1)
+                Console.Write("" + value + ",");
+            Console.WriteLine();
+
+            Console.WriteLine("Luvut taulukossa 2 : ");
+            foreach (int value in table2)
+                Console.Write("" + value + ",");
+            Console.WriteLine();
+
+            Console.WriteLine("Luvut yhdistetyssätaulukossa : ");
+            foreach (int value in table3)
+                Console.Write("" + value + ",");
+            Console.WriteLine();
+
         }
         // ------------
 
