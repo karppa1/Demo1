@@ -11,7 +11,7 @@ namespace harjoituksia
         static void Main(string[] args)
         {
 
-            Harjoitus17();
+            Harjoitus18();
 
             Console.ReadLine();
 
@@ -371,10 +371,37 @@ namespace harjoituksia
                 Console.Write("" + value + ",");
             Console.WriteLine();
 
-            Console.WriteLine("Luvut yhdistetyssätaulukossa : ");
+            Console.WriteLine("Luvut yhdistetyssä taulukossa : ");
             foreach (int value in table3)
                 Console.Write("" + value + ",");
             Console.WriteLine();
+
+        }
+        // ------------
+
+        static void Harjoitus18()
+        {
+            string jono;
+
+            Console.WriteLine("Anna merkkijono > ");
+            jono = Console.ReadLine();
+
+            string jono2 = "";
+
+            for (int i = jono.Length - 1; i >= 0; i--)
+            {
+                jono2 += jono[i];
+            }
+
+            if (jono == jono2)
+            {
+                Console.WriteLine("Oli palindromi!");
+            }
+
+            else
+            {
+                Console.WriteLine("Ei ollut palindromi!");
+            }
 
         }
         // ------------
