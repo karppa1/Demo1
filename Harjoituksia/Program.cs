@@ -11,7 +11,7 @@ namespace harjoituksia
         static void Main(string[] args)
         {
 
-            Harjoitus18();
+            Harjoitus14();
 
             Console.ReadLine();
 
@@ -149,16 +149,14 @@ namespace harjoituksia
         static void Harjoitus6()
         {
             int matka = 0;
-            double totalkulu = 0;
-            double totalhinta = 0;
             const double kulutus = 7.02;
             const double hinta = 1.595;
 
             Console.WriteLine("Anna matka > ");
             matka = int.Parse(Console.ReadLine());
 
-            totalkulu = kulutus * matka / 100;
-            totalhinta = totalkulu * hinta;
+            double totalkulu = kulutus * matka / 100;
+            double totalhinta = totalkulu * hinta;
 
             Console.WriteLine("Kulutus on " + totalkulu + " litraa " + ", kustannus " + totalhinta + " euroa");
         }
@@ -296,7 +294,54 @@ namespace harjoituksia
         }
         // ------------
 
-        static void Harjoitus15()
+        static void Harjoitus14()
+        {
+
+            const int numbers = 10;
+            int[] table = new int[numbers];
+            const int numValues = 6;
+
+            int grade = 0;
+
+            Console.WriteLine("Anna kymmenen opiskelijan arvosana asteikolla 0-5");
+
+            for (int i = 0; i < numbers; i++)
+            {
+                Console.WriteLine("Anna arvosana > ");
+                grade = int.Parse(Console.ReadLine());
+
+                if (grade > 5)
+                {
+                    Console.WriteLine("Error! Virheellinen arvosana! Ohjelma lopetetaan!");
+                    return;
+                }
+
+                else table[grade]++;
+
+            }
+
+            Console.WriteLine();
+
+            int sum = 0;
+
+            for (int i = 0; i < numValues; i++)
+            {
+                Console.Write(i + ":");
+                sum = table[i];
+
+                for (int j = 0; j <= sum - 1; j++)
+                {
+                    Console.Write("*");
+                }
+
+                Console.WriteLine();
+
+            }
+
+        }
+        // ------------
+
+        static void Harjoitus15()   // Kesken...
         {
             int num = 0;
 
@@ -359,7 +404,13 @@ namespace harjoituksia
         {
             int[] table1 = { 10, 20, 30, 40, 50 };
             int[] table2 = { 5, 15, 25, 35, 45 };
-            int[] table3 = Enumerable.Concat(table1, table2).OrderBy(v => v).ToArray();
+
+            // Vaihtoehto 1
+//            int[] table3 = Enumerable.Concat(table1, table2).OrderBy(v => v).ToArray();
+
+            // Vaihtoehto 2
+            int[] table3 = Enumerable.Concat(table1, table2).ToArray(); // Toimii näinkin
+            Array.Sort(table3); // Lajittelu suuruusjärjestykseen
 
             Console.WriteLine("Luvut taulukossa 1 : ");
             foreach (int value in table1)
@@ -406,6 +457,13 @@ namespace harjoituksia
         }
         // ------------
 
+        static void Harjoitus19()
+        {
+
+
+
+        }
+        // ------------
     }
 }
 
