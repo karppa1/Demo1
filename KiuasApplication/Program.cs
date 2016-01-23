@@ -16,11 +16,40 @@ namespace KiuasApplication
 
             Console.WriteLine("Kytketäänkö kiukaaseen virta? K/E ");
             char option = char.Parse(Console.ReadLine());
+            
+                switch (option)
+                {
+                    case 'k':
+                    case 'K':
+                        ekakiuas.TurnOn();
+                        ekakiuas.SetTemp();
+                        ekakiuas.SetMoist();
+
+                        ekakiuas.PrintData();
+                        Console.WriteLine();
+                        
+                        break;
+
+                    case 'e':
+                    case 'E':
+                        Console.WriteLine("Kiuas ei ole päällä!");
+                        ekakiuas.TurnOff();
+
+                        break;
+                }
+
+
+
+            while (ekakiuas.PowerOff == 0)
+            {
+
+                Console.WriteLine("Säädetäänkö kiuasta? K/E ");
+                option = char.Parse(Console.ReadLine());
 
                 switch (option)
                 {
                     case 'k':
-                    case 'K': ekakiuas.TurnOn();
+                    case 'K':
                         ekakiuas.SetTemp();
                         ekakiuas.SetMoist();
 
@@ -30,34 +59,14 @@ namespace KiuasApplication
                         break;
 
                     case 'e':
-                    case 'E': Console.WriteLine("Kiuas ei ole päällä!");
+                    case 'E': ekakiuas.TurnOff();
+                        Console.WriteLine();
 
                         break;
                 }
 
-
-            Console.WriteLine("Sammutetaanko kiuas? K/E ");
-            option = char.Parse(Console.ReadLine());
-
-            switch (option)
-            {
-
-                case 'k':
-                case 'K':
-                    ekakiuas.TurnOff();
-                    Console.WriteLine("Kiuas ei ole päällä!");
-
-                    break;
-
-                case 'e':
-                case 'E':
-                    ekakiuas.TurnOn();
-                    ekakiuas.SetTemp();
-                    ekakiuas.SetMoist();
-
-                    break;
             }
-
+            
             ekakiuas.PrintData();
 
             Console.ReadLine();

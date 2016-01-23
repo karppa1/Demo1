@@ -8,6 +8,7 @@ namespace KiuasApplication
 {
     class Kiuas
     {
+        public int PowerOff = 0;
         public string Power { get; set; }
         public int Temp { get; set; }
         public int Moist { get; set; }
@@ -19,6 +20,7 @@ namespace KiuasApplication
 
         public void TurnOff()
         {
+            PowerOff = 1;
             Power = "Off";
             Temp = 0;
             Moist = 0;
@@ -41,6 +43,7 @@ namespace KiuasApplication
 
         public void PrintData()
         {
+            Console.WriteLine();
             Console.WriteLine("* Kiukaan tiedot *");
             Console.WriteLine("Kiukaan tila: " + Power);
             Console.WriteLine("Lämpötila: " + Temp + " astetta");
