@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Olioharjoituksia", "Oliohar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KiuasApplication", "..\KiuasApplication\KiuasApplication.csproj", "{A49F0D21-2FBB-439F-A319-AB9284B5F65B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleApplication", "..\VehicleApplication\VehicleApplication.csproj", "{6A7E919B-5C72-4399-9F71-3595437F70A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A49F0D21-2FBB-439F-A319-AB9284B5F65B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A49F0D21-2FBB-439F-A319-AB9284B5F65B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A49F0D21-2FBB-439F-A319-AB9284B5F65B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A7E919B-5C72-4399-9F71-3595437F70A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A7E919B-5C72-4399-9F71-3595437F70A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A7E919B-5C72-4399-9F71-3595437F70A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A7E919B-5C72-4399-9F71-3595437F70A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

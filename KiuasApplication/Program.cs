@@ -36,6 +36,10 @@ namespace KiuasApplication
                         ekakiuas.TurnOff();
 
                         break;
+
+                default: Console.WriteLine("Error!");
+                    return;
+                    break;
                 }
 
 
