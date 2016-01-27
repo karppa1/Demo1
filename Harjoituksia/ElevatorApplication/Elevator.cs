@@ -31,6 +31,19 @@ namespace ElevatorApplication
         public void AskNumber()
         {
             Console.WriteLine("Give a new floor number (1-5) > ");
+            for (int i = 0; i < 5; i++)
+            {
+                
+                string line = Console.ReadLine();
+                int number;
+                bool result = int.TryParse(line, out number);
+                if (result)
+                {
+                    Floor = number;
+                }
+
+                PrintData();
+            }
         }
 
         public void PrintData()
