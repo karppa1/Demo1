@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioApplication", "..\Radi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecordingMediaApplication", "RecordingMediaApplication\RecordingMediaApplication.csproj", "{D80F0C11-3CFB-4069-971E-FBFC07C72F3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3", "..\Task3\Task3.csproj", "{53C7C778-8BA3-47FF-BEE6-A9C82F51E4C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{D80F0C11-3CFB-4069-971E-FBFC07C72F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D80F0C11-3CFB-4069-971E-FBFC07C72F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D80F0C11-3CFB-4069-971E-FBFC07C72F3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53C7C778-8BA3-47FF-BEE6-A9C82F51E4C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C7C778-8BA3-47FF-BEE6-A9C82F51E4C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C7C778-8BA3-47FF-BEE6-A9C82F51E4C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C7C778-8BA3-47FF-BEE6-A9C82F51E4C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
