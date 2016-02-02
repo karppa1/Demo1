@@ -20,6 +20,16 @@ namespace Object6Task1
             persons.Add(new Person("98375-9887", "Aku6", "Ankka0", 64, 46, 76));
             persons.Add(new Person("23523-2665", "Aku7", "Ankka5", 39, 47, 77));
 
+            /*
+            foreach (Person somebody in persons)
+            {
+                Console.WriteLine(somebody.ToString());
+            }
+            */
+
+            // sorting by age...
+
+            persons.Sort((x, y) => x.Age.CompareTo(y.Age));
 
             foreach (Person somebody in persons)
             {
@@ -35,6 +45,19 @@ namespace Object6Task1
             if (found != null)
             {
                 Console.WriteLine("Person with SSN " + SSN + " FOUND!");
+            }
+            else
+            {
+                Console.WriteLine("Person not found!");
+            }
+
+            // try to find person with age...
+
+            Person found2 = persons.Find(x => x.Age == 67);
+
+            if (found != null)
+            {
+                Console.WriteLine("Person FOUND!");
             }
             else
             {
