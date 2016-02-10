@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceApplication", "..\DiceA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo8Task2", "..\Demo8Task2\Demo8Task2.csproj", "{D1477DFA-1572-4C9A-9B6A-D8B104F50E76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo7Task2", "..\Demo7Task2\Demo7Task2.csproj", "{413C7112-1AF1-46EA-9FAD-60598F72EEBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{D1477DFA-1572-4C9A-9B6A-D8B104F50E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1477DFA-1572-4C9A-9B6A-D8B104F50E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1477DFA-1572-4C9A-9B6A-D8B104F50E76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{413C7112-1AF1-46EA-9FAD-60598F72EEBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{413C7112-1AF1-46EA-9FAD-60598F72EEBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{413C7112-1AF1-46EA-9FAD-60598F72EEBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{413C7112-1AF1-46EA-9FAD-60598F72EEBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
