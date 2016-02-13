@@ -10,28 +10,86 @@ namespace Demo7Task2
     {
         static void Main(string[] args)
         {
+            bool tila = true;
             int kokoluku;
             double liukuluku;
-
-            Console.WriteLine("Anna luku > ");
-            string luku = Console.ReadLine();
+            List<int> kokonaiset = new List<int>();
+            List<double> liukuvat = new List<double>();
             
-            if (int.TryParse(luku, out kokoluku))
+            do
             {
-                Console.WriteLine("Kokonaisluku!");
-                Console.WriteLine("Luku oli: " + kokoluku);
-            }
-            else if (double.TryParse(luku, out liukuluku))
+
+                Console.WriteLine("Anna luku > ");
+                string luku = Console.ReadLine();
+
+                if (int.TryParse(luku, out kokoluku))
+                {
+                    Console.WriteLine("Kokonaisluku!");
+                    Console.WriteLine("Luku oli: " + kokoluku);
+                    Console.WriteLine();
+
+                    kokonaiset.Add(kokoluku);
+
+                    /*                System.IO.StreamWriter tallennusTiedosto = null;
+                                    try
+                                    {
+                                        tallennusTiedosto = new System.IO.StreamWriter("Integers.txt");
+                                        tallennusTiedosto.WriteLine(kokoluku);
+                                    }
+                                    finally
+                                    {
+                                        // check for null because OpenWrite might have failed
+                                        if (tallennusTiedosto != null)
+                                        {
+                                            tallennusTiedosto.Close();
+                                        }
+                                    }
+                                    */
+                }
+                else if (double.TryParse(luku, out liukuluku))
+                {
+                    Console.WriteLine("Liukuluku!");
+                    Console.WriteLine("Luku oli: " + liukuluku);
+                    Console.WriteLine();
+
+                    liukuvat.Add(liukuluku);
+
+                    /*                System.IO.StreamWriter tallennusTiedosto = null;
+                                    try
+                                    {
+                                        tallennusTiedosto = new System.IO.StreamWriter("Doubles.txt");
+                                        tallennusTiedosto.WriteLine(liukuluku);
+                                    }
+                                    finally
+                                    {
+                                        // check for null because OpenWrite might have failed
+                                        if (tallennusTiedosto != null)
+                                        {
+                                            tallennusTiedosto.Close();
+                                        }
+                                    }
+                                    */
+                }
+                else
+                {
+                    Console.WriteLine("Et antanut lukua!");
+                    tila = false;
+                }
+
+            } while (tila == true);
+
+            Console.WriteLine("\nKokonaiset: ");
+            foreach (int kokotiedot in kokonaiset)
             {
-                Console.WriteLine("Liukuluku!");
-                Console.WriteLine("Luku oli: " + liukuluku);
-            }         
-            else
-            {
-                Console.WriteLine("Et antanut lukua!");
+                Console.WriteLine(kokotiedot);
             }
 
-            
+            Console.WriteLine("\nLiukuluvut: ");
+            foreach (double liukutiedot in liukuvat)
+            {
+                Console.WriteLine(liukutiedot);
+            }
+
             Console.ReadLine();
         }
     }
