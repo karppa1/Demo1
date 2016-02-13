@@ -10,20 +10,28 @@ namespace Demo7Task2
     {
         static void Main(string[] args)
         {
-            
+            int kokoluku;
+            double liukuluku;
+
             Console.WriteLine("Anna luku > ");
-            string line = Console.ReadLine();
-
-            try
+            string luku = Console.ReadLine();
+            
+            if (int.TryParse(luku, out kokoluku))
             {
-                int number = int.Parse(line);
-                Console.WriteLine("Luku oli: " + number);
-
-            } catch(FormatException)
+                Console.WriteLine("Kokonaisluku!");
+                Console.WriteLine("Luku oli: " + kokoluku);
+            }
+            else if (double.TryParse(luku, out liukuluku))
             {
-                Console.WriteLine("Error!");
+                Console.WriteLine("Liukuluku!");
+                Console.WriteLine("Luku oli: " + liukuluku);
+            }         
+            else
+            {
+                Console.WriteLine("Et antanut lukua!");
             }
 
+            
             Console.ReadLine();
         }
     }
