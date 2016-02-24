@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="Esimerkki.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Esimerkki"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <ProgressBar HorizontalAlignment="Left" Height="10" Margin="319,262,0,0" VerticalAlignment="Top" Width="100" Value="{Binding Value, ElementName=slider}"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Margin="319,379,0,0" VerticalAlignment="Top" Width="129"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="440,256,0,0" TextWrapping="Wrap" Text="{x:Bind PropertyBindingText}" VerticalAlignment="Top" SelectionChanged="textBlock_SelectionChanged"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="504,386,0,0" TextWrapping="Wrap" Text="{Binding Value, ElementName=slider, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <StackPanel HorizontalAlignment="Left" Height="142" Margin="811,276,0,0" VerticalAlignment="Top" Width="127">
+            <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="{x:Bind person.Firstname}"/>
+            <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="{x:Bind person.Lastname}"/>
+        </StackPanel>
+
+    </Grid>
+</Page>
